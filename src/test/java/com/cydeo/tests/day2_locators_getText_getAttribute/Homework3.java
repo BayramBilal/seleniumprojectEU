@@ -2,6 +2,7 @@ package com.cydeo.tests.day2_locators_getText_getAttribute;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -19,13 +20,15 @@ public class Homework3 {
 
         //2- Go to: https://google.com
 
-        driver.navigate().to("https://google.com");
+        driver.get("https://google.com");
 
 
        //3- Click to Gmail from top right.
 
-        WebElement gmailButton = driver.findElement(By.className("gb_1 gb_2 gb_8d gb_8c"));
+        WebElement gmailButton = driver.findElement(By.className("gb_d"));
         gmailButton.click();
+
+
 
         //4- Verify title contains:
         //Expected: Gmail
@@ -43,6 +46,14 @@ public class Homework3 {
 
         //6- Verify title equals:
         //Expected: Google
+        String expectedTitle = "Google";
+        String actualTitle = driver.getTitle();
+
+        if (actualTitle.equals(expectedTitle)){
+            System.out.println("Title Gmail verification PASSED!");
+        }else{
+            System.out.println("Title Gmail verification FAILED!!!");
+        }
 
 
 
