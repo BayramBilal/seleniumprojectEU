@@ -55,7 +55,7 @@ public class Homework3 {
             System.out.println("Title Google verification FAILED!!!");
         }
 
-
+    driver.close();
 
     }
 }

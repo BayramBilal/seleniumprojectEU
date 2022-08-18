@@ -38,6 +38,6 @@ public class Homework4 {
 
         //PS: Locate “Home” link using “className” locato
 
-
+    driver.close();
     }
 }
