@@ -50,9 +50,9 @@ public class Homework3 {
         String actualTitle = driver.getTitle();
 
         if (actualTitle.equals(expectedTitle)){
-            System.out.println("Title Gmail verification PASSED!");
+            System.out.println("Title Google verification PASSED!");
         }else{
-            System.out.println("Title Gmail verification FAILED!!!");
+            System.out.println("Title Google verification FAILED!!!");
         }
 
 
